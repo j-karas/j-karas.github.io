@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Philly District Crime</title>
+
+        <!-- import D3 Version 6 here or at the end of the body -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
+        <!-- <script src="https://unpkg.com/topojson@3"></script> -->
+        <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+        <script src="http://d3js.org/topojson.v0.min.js"></script>
+        <script src="./geomap.js"></script>
+        <script src="./bargraphs.js"></script>        
+        
+        <!-- load our custom D3 code (must happen after D3 is loaded) -->
+        <!-- <script src="./geomap.js"></script> -->
+        <style>
+            path {
+                fill: rgb(196, 202, 199);
+                stroke: black;
+                stroke-width: .75px;
+                pointer-events: all;
+            }
+        
+            text {
+                font-family: sans-serif;
+                font-size: 15px;
+                color: rgb(53, 53, 54);
+            }
+
+            .district {
+                font-feature-settings: sans-serif;
+                font-size:25px;
+                color: black;
+                text-decoration:solid;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- create an SVG canvas for us to modify -->
+        <div style="margin: auto; width:50%">
+            <select id="selectButton"></select>
+        </div>
+        <svg id="geomap" width="1200" height="800"></svg>
+        </br></br></br></br>
+        <div style="margin: auto; width:50%">
+            Select a District:
+            <select id="selectButton2"></select>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            Select a District:
+            <select id="selectButton3"></select>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+        <svg id="bargraph"></svg>
+        <svg id="bargraph2"></svg>
+        <div id="tooltip"></div>
+        </div>
+    </body>
+</html>
